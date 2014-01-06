@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<!-- This HTML page renders the documentation for [Brocco](?brocco.js) and
+also serves as an example of how to create dynamic documentation
+using it. -->
+<link rel="stylesheet" href="app/scripts/vendor/brocco/docco.css">
+<title></title>
+<div id="container">
+  <div id="background"></div>
+  <div id="jump_to">
+    Jump To &hellip;
+    <div id="jump_wrapper">
+      <div id="jump_page">
+        <!-- These are links for the pages that will
+be documented. <code>[jump-to.js](?jump-to.js)</code>
+automatically turns them into real links on page load. -->
+        <a class="source">app/scripts/bundles/todo/collections/todoList.js</a>
+            <a class="source">app/scripts/bundles/todo/models/todo.js</a>
+                <a class="source">app/scripts/bundles/todo/templates/todoTemplate.jade</a>
+                    <a class="source">app/scripts/bundles/todo/views/main.js</a>
+                        <a class="source">app/scripts/bundles/todo/views/todoView.js</a>
+                          <a class="source">app/scripts/bundles/todo/main.js</a>
+                          <a class="source">app/scripts/app.js</a>
+                           <a class="source">app/scripts/main.js</a>
+                            <a class="source">app/scripts/router.js</a>
+                             <a class="source">app/component.json</a>
+                              <a class="source">app/index.html</a>
+
+      </div>
+  </div>
+</div>
+
+<script src="app/scripts/vendor/brocco/brocco.js"></script>
+<script src="app/scripts/vendor/brocco/html-and-css.js"></script>
+<script src="app/scripts/vendor/brocco/jump-to.js"></script>
+<script src="app/scripts/vendor/brocco/showdown.js"></script>
