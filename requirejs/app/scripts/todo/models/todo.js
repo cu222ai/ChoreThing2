@@ -1,4 +1,4 @@
-define(["jquery", "underscore", "backbone", "./collections/todoList"], function ($, _, Backbone, TodoCollection) {
+define(["jquery", "underscore", "backbone", "../collections/todoList"], function ($, _, Backbone, TodoCollection) {
 
 
     var Todo = Backbone.Model.extend({
@@ -12,12 +12,6 @@ define(["jquery", "underscore", "backbone", "./collections/todoList"], function 
                 date: this.todo.presentDate()
             };
         },
-
-          validate: function(attr, options){
-                  if(!attr.title.match(/^[a-zåäö\s]*$/i)){
-                          return "Wrong format"; // TODO: better help-errors
-                  }
-                },
 
         // Makes sure every item has a title
         initialize: function () {
