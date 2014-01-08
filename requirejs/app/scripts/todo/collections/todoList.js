@@ -7,7 +7,7 @@ define([
 ], function ($, _, Backbone, BackboneLocalStorage, Todo) {
 
 
-    var TodoList = Backbone.Collection.extend({
+    var todoList = Backbone.Collection.extend({
 
 
         model: Todo,
@@ -33,5 +33,5 @@ define([
             }
         });
 
-    return TodoList;
+    return todoList;
 });
