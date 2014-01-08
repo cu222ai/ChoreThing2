@@ -2,7 +2,7 @@ define([
     "underscore",
     "backbone",
     "todo/views/main",
-    "todo/collections/TodoList"
+    "todo/collections/todoList"
     ], function (_, Backbone, MainView, TodoCollection) {
 
      // Basic router
