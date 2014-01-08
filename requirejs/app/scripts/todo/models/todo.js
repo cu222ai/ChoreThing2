@@ -1,3 +1,4 @@
+
 define(["jquery", "underscore", "backbone", "../collections/todoList"], function ($, _, Backbone, TodoCollection) {
 
 
@@ -5,13 +6,24 @@ define(["jquery", "underscore", "backbone", "../collections/todoList"], function
 
         // Item structure
         defaults: function () {
-            this.todoCollection = new TodoCollection();
             return {
                 title: " ",
                 done: false,
-                date: this.todoCollection.presentDate()
+                date: this.presentDate()
             };
         },
+
+                //Simple converter that makes the Date() format into month followed by year
+            presentDate: function () {
+
+                 var months = ['January','February','March','April','May','June','July',
+                'August','September','October','November','December'];
+                var tomorrow = new Date();
+                tomorrow.setTime(tomorrow.getTime() + (1000*3600*24));
+                var date = months[tomorrow.getMonth()] + " " + tomorrow.getDate()+ ", " + tomorrow.getFullYear();
+
+                return date;
+            },
 
         // Makes sure every item has a title
         initialize: function () {
