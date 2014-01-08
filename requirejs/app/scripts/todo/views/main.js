@@ -1,4 +1,3 @@
-
 define([
     'jquery',
     'underscore',
@@ -23,15 +22,15 @@ define([
 
             this.todoCollection = new TodoCollection();
             this.input = this.$("#new-todo");
-            this.listenTo(this.Todo, 'add', this.addOne);
+            this.listenTo(this.todoCollection, 'add', this.addOne);
             this.main = $('#main');
-            this.Todo.fetch();
+            this.todoCollection.fetch();
         },
 
         //Checks whether Todo has any content, if not hide main-element
         render: function() {
 
-               if (this.Todo.length) {
+               if (this.todoCollection.length) {
                     this.main.show();
                 } else {
                     this.main.hide();
@@ -44,7 +43,7 @@ define([
             if (e.keyCode != 13) return;
             if (!this.input.val()) return;
 
-            this.Todo.create({title: this.input.val()});
+            this.todoCollection.create({title: this.input.val()});
             this.input.val('');
         },
 
