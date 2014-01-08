@@ -1,6 +1,4 @@
-(function () {
-  'use strict';
-
+  //Starts the router and the application
   requirejs.config({
     baseUrl: "scripts/",
      paths: {
@@ -12,8 +10,10 @@
              "text": "vendor/requirejs-text/text"
   }
   });
+//Go for it Mr. Router!
+ require(['router', "backbone"], function(Router, Backbone) {
+  new Router();
+});
 
-  require(['app'], function (app) {
-    app.initialize();
-  });
-}());
+
+//instansiera route här
