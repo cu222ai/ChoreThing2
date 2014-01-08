@@ -14,12 +14,6 @@ define(["jquery", "underscore", "backbone", "../collections/todoList"], function
             };
         },
 
-          validate: function(attr, options){
-                  if(!attr.title.match(/^[a-zåäö\s]*$/i)){
-                          return "Wrong format"; // TODO: better help-errors
-                  }
-                },
-
         // Makes sure every item has a title
         initialize: function () {
             if (!this.get("title")) {
