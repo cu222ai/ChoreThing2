@@ -5,11 +5,11 @@ define(["jquery", "underscore", "backbone", "../collections/todoList"], function
 
         // Item structure
         defaults: function () {
-            this.todo = new TodoCollection();
+            this.todoCollection = new TodoCollection();
             return {
                 title: " ",
                 done: false,
-                date: this.todo.presentDate()
+                date: this.todoCollection.presentDate()
             };
         },
 
