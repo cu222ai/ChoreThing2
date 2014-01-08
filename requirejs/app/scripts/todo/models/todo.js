@@ -1,4 +1,3 @@
-
 define(["jquery", "underscore", "backbone", "../collections/todoList"], function ($, _, Backbone, TodoCollection) {
 
 
@@ -6,7 +5,7 @@ define(["jquery", "underscore", "backbone", "../collections/todoList"], function
 
         // Item structure
         defaults: function () {
-            this.todoCollection = new TodoCollection();
+            var todoCollection = new TodoCollection();
             return {
                 title: " ",
                 done: false,
