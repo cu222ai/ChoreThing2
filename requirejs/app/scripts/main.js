@@ -14,6 +14,3 @@
  require(['router', "backbone"], function(Router, Backbone) {
   new Router();
 });
-
-
-//instansiera route här
