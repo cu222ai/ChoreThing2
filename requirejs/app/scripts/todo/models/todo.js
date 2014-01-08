@@ -1,11 +1,11 @@
-define(["jquery", "underscore", "backbone", "../collections/todoList"], function ($, _, Backbone, TodoCollection) {
+define(["jquery", "underscore", "backbone", "../collections/TodoList"], function ($, _, Backbone, TodoCollection) {
 
 
     var Todo = Backbone.Model.extend({
 
         // Item structure
         defaults: function () {
-            var todoCollection = new TodoCollection();
+            this.todoCollection = new TodoCollection();
             return {
                 title: " ",
                 done: false,
