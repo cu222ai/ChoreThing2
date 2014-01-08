@@ -1,5 +1,4 @@
-
-define(["jquery", "underscore", "backbone", "../collections/TodoList"], function ($, _, Backbone, TodoCollection) {
+define(["jquery", "underscore", "backbone", "../collections/dodoList"], function ($, _, Backbone, TodoCollection) {
 
 
     var Todo = Backbone.Model.extend({
