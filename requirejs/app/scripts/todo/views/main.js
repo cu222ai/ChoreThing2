@@ -1,5 +1,4 @@
 
-
 define([
     'jquery',
     'underscore',
@@ -22,7 +21,7 @@ define([
         //Gets existing items in localStorage, binds to collection.
         initialize: function() {
 
-            this.Todo = new TodoCollection();
+            this.todoCollection = new TodoCollection();
             this.input = this.$("#new-todo");
             this.listenTo(this.Todo, 'add', this.addOne);
             this.main = $('#main');
