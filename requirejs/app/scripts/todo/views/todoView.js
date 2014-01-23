@@ -41,18 +41,16 @@ define([
             this.input = this.$('.edit');
             this.$el.toggleClass('done', this.model.get('done'));
 
-            if(this.model.get('done') ==  true)
+            if(this.model.get('done') === true)
             {
                 this.$el.find(".btn.pull-right").hide();
             }
             return this;
         },
-
-
-
+        
         // Editing mode for the item, shows the edit div, hides the content div.
         edit: function () {
-            if(this.model.get('done') ==  false)
+            if(this.model.get('done') === false)
             {
             this.$el.find(".edit").show();
             this.$el.find("#content").hide();
@@ -87,7 +85,6 @@ define([
 
         //Simply renders the item attribute "done" to true
         choreDone: function () {
-             var view = this.model;
                 this.model.save({done: true});
         }
 

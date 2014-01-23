@@ -2,7 +2,7 @@ define([
     'jquery',
     'underscore',
     'backbone',
-    '../collections/todoList',
+    '../collections/todoController',
     './todoView',
 
     ],
