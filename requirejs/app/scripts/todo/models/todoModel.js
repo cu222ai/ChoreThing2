@@ -1,4 +1,3 @@
-
 define(["jquery", "underscore", "backbone", "../collections/todoController"], function ($, _, Backbone, TodoCollection) {
 
 
@@ -18,9 +17,9 @@ define(["jquery", "underscore", "backbone", "../collections/todoController"], fu
     
              var months = ['January','February','March','April','May','June','July',
             'August','September','October','November','December'];
-            var tomorrow = new Date();
-            //tomorrow.setTime(tomorrow.getTime() + (1000*3600*24));
-            var date = months[tomorrow.getMonth()] + " " + tomorrow.getDate()+ ", " + tomorrow.getFullYear();
+            var today = new Date();
+            
+            var date = months[today.getMonth()] + " " + today.getDate()+ ", " + today.getFullYear();
     
             return date;
         },
