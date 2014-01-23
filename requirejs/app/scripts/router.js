@@ -2,7 +2,7 @@ define([
     "underscore",
     "backbone",
     "todo/views/main",
-    "todo/collections/todoList"
+    "todo/collections/todoController"
     ], function (_, Backbone, MainView, TodoCollection) {
 
      // Basic router
@@ -20,16 +20,6 @@ define([
                              });
 
         }
-
-        //If you want to add multi-page functionality in the future
-        // routes: {
-        //         '/*': 'home'
-
-        // },
-
-        // home: function(){
-        //    this.mainView;
-        // }
     });
 
     return Router;
