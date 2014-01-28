@@ -2,10 +2,9 @@
 
 define([
     'jquery',
-    'underscore',
     'backbone',
     'text!../templates/todoTemplate.jade'
-    ], function ($, _, Backbone, todoTemplate) {
+    ], function ($, Backbone, todoTemplate) {
 
     var todoView = Backbone.View.extend({
 
@@ -62,10 +61,8 @@ define([
         // Either removes item if input field is empty in editing mode, or saves with the new title data.
         close: function () {
             var value = this.input.val();
-                if (!value) {
-                    this.clear();
-                }
-                else {
+                console.log($.trim(value));
+                if ($.trim(value)) {
                     this.model.save({title: value});
                     this.$el.removeClass("editing");
                 }

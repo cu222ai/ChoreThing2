@@ -1,9 +1,8 @@
 define([
-    "underscore",
     "backbone",
     "todo/views/main",
     "todo/collections/todoController"
-    ], function (_, Backbone, MainView, TodoCollection) {
+    ], function (Backbone, MainView, TodoCollection) {
 
      // Basic router
     var Router = Backbone.Router.extend({
