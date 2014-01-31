@@ -1,20 +1,18 @@
 define([
     'jquery',
-    'underscore',
     'backbone',
     '../collections/todoController',
     './todoView',
 
     ],
-    function ($, _, Backbone, TodoCollection, TodoView) {
+    function ($, Backbone, TodoCollection, TodoView) {
 
     var mainView = Backbone.View.extend({
         //If we want to, we can switch to more dynamic approach to "el" while loading page.
         el: $("#todocontainer"),
 
         events: {
-                "keypress #new-todo":  "createOnEnter",
-
+                "keypress #new-todo":  "createOnEnter"
         },
 
         //Gets existing items in localStorage, binds to collection.
@@ -41,7 +39,7 @@ define([
           createOnEnter: function(e) {
 
             if (e.keyCode != 13) return;
-            if (!this.input.val()) return;
+            if (!$.trim(this.input.val())) return;
 
             this.todoCollection.create({title: this.input.val()});
             this.input.val('');

@@ -1,10 +1,9 @@
 define([
     "jquery",
-    "underscore",
     "backbone",
     "backboneLocalStorage",
     "../models/todoModel"
-], function ($, _, Backbone, BackboneLocalStorage, Todo) {
+], function ($, Backbone, BackboneLocalStorage, Todo) {
 
     var todoController = Backbone.Collection.extend({
 
